@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Customize your theme here. -->
+
+        ...
+        ...
+
+    </style>
+
+    <style name="Theme.Taller" parent="Base.Theme.Taller" />
+</resources>
