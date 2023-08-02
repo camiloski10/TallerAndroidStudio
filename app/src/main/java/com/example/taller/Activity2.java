@@ -49,6 +49,10 @@ public class Activity2 extends AppCompatActivity {
                 boolean salud = checkBoxSalud.isChecked();
                 boolean pension = checkBoxPension.isChecked();
 
+                double valorDiario = sueldoBase/30;
+
+                double sueldoTotal = valorDiario * diasLaborados;
+
                 double descuentoTotal = 0;
                 if (descuento) {
                     descuentoTotal += sueldoBase * 0.03;
@@ -60,12 +64,13 @@ public class Activity2 extends AppCompatActivity {
                     descuentoTotal += sueldoBase * 0.04;
                 }
 
-                double sueldoDescontado = sueldoBase - descuentoTotal;
+                double sueldoDescontado = sueldoTotal - descuentoTotal;
 
                 Intent intent = new Intent(Activity2.this, ActivityResultados.class);
                 intent.putExtra("nombres", nombres);
                 intent.putExtra("apellidos", apellidos);
                 intent.putExtra("cargo", cargo);
+                intent.putExtra("Valor_del_dia",  valorDiario);
                 intent.putExtra("sueldo_descontado", sueldoDescontado);
                 startActivity(intent);
             }
